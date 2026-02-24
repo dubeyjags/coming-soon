@@ -16,7 +16,7 @@
             align-items: center;
             height: 100vh;
         }
-        div{
+        div.container{
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
@@ -38,17 +38,22 @@
             font-size: 50px;
             margin-bottom: 20px;
         }
+        #domain{
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <div>
+    <div class="container">
         <strong id="domain"></strong>
         <h1><span>🚧</span>Coming Soon</h1>
         <p>Our website is <b>Under Construction</b>.. Stay tuned for something amazing!</p>
     </div>
     <script>
         let domainElement = document.getElementById('domain');
-        domainElement.textContent = window.location.hostname;
+        domainElement.textContent = window.location.hostname.split('.')[0];
     </script>
 </body>
 </html>
